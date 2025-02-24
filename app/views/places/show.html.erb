@@ -1,0 +1,13 @@
+<h1><%= @place.name %></h1>
+<p><%= @place.location %></p>
+<p><%= @place.description %></p>
+
+<h2>Entries</h2>
+<% @entries.each do |entry| %>
+  <div>
+    <h3><%= entry.title %></h3>
+    <p><%= entry.content %></p>
+  </div>
+<% end %>
+
+<%= link_to "Add a New Entry", new_place_entry_path(@place) %>
