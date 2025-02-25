@@ -17,9 +17,14 @@
     <%= form.text_field :title %>
   </div>
 
+    <div>
+    <%= form.label :occurred_on, "Date" %>
+    <%= form.date_select :occurred_on, start_year:1990, end_year:2030 %>
+  </div>
+
   <div>
-    <%= form.label :content %><br>
-    <%= form.text_area :content %>
+    <%= form.label :description %>
+    <%= form.text_area :description, rows: 5 %>
   </div>
 
   <div>

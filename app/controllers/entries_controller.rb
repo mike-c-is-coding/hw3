@@ -1,5 +1,5 @@
 
-  class EntryController < ApplicationController
+  class EntriesController < ApplicationController
     def new
       @place = Place.find(params[:place_id])
       @entry = @place.entries.build
@@ -18,8 +18,7 @@
     private
   
     def entry_params
-      params.require(:entry).permit(:title, :date, :content)
+      params.require(:entry).permit(:title, :occurred_on, :description)
     end
   end
-end
 

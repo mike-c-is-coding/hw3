@@ -3,7 +3,6 @@
 <% @places.each do |place| %>
   <div>
     <h2><%= link_to place.name, place_path(place) %></h2>
-    <p><%= place.location %></p>
   </div>
 <% end %>
 
